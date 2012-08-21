@@ -16,7 +16,7 @@
  *
  * @author: Simon Champion <simon.champion@connectionservices.com>
  * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
- * @version 1.0 / 17-Aug-2012
+ * @version 1.0.1 / 21-Aug-2012
  */
 class ApacheLogIterator extends SplFileObject {
     private $fields=null;   //instance of ApacheLogFields or similar class.
