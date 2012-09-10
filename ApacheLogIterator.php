@@ -37,13 +37,19 @@ class ApacheLogIterator extends SplFileObject {
 
 	private function parseLogRow($row) {
         $matches = array();
+
 		preg_match($this->fields->regex, $row, $matches);
-		if(!isset($matches[0])) { return null; }
+
+		if (!isset($matches[0])) {
+			return null;
+		}
         $output = array();
-        foreach($this->fields->fieldArray as $key=>$field) {
-            if($field) {$output[$field]=trim($matches[$key]);}
+        foreach ($this->fields->fieldArray as $key=>$field) {
+            if ($field) {
+				$output[$field]=trim($matches[$key]);
+			}
         }
-        if(!isset($output['scheme'])) {
+        if (!isset($output['scheme'])) {
 			$output['scheme']='https';
 		}
         $output['request'] = $this->parseURL(
@@ -51,7 +57,11 @@ class ApacheLogIterator extends SplFileObject {
 			isset($output["host"]) ? $output['host'] : "",
 			isset($output["query"]) ? $output['query'] : ""
 		);
-        unset($output['scheme'],$output['host'],$output['query']);
+        unset(
+			$output['scheme'],
+			$output['host'],
+			$output['query']
+		);
         return $output;
 
 	}
