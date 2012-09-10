@@ -43,8 +43,14 @@ class ApacheLogIterator extends SplFileObject {
         foreach($this->fields->fieldArray as $key=>$field) {
             if($field) {$output[$field]=trim($matches[$key]);}
         }
-        if(!isset($output['scheme'])) {$output['scheme']='http';}
-        $output['request'] = $this->parseURL($output['scheme'],$output['host'],$output['query']);
+        if(!isset($output['scheme'])) {
+			$output['scheme']='https';
+		}
+        $output['request'] = $this->parseURL(
+			isset($output["scheme"]) ? $output['scheme'] : "",
+			isset($output["host"]) ? $output['host'] : "",
+			isset($output["query"]) ? $output['query'] : ""
+		);
         unset($output['scheme'],$output['host'],$output['query']);
         return $output;
 
