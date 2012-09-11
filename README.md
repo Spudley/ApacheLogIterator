@@ -22,10 +22,28 @@ In addition, ApacheLogIterator comes with a small helper class called ApacheLogF
 
 Filtering the output is trivial: Since it is an Iterator class, you can filter the output using PHP's built-in [FilterIterator](http://php.net/manual/en/class.filteriterator.php).
 
-## Example
+## Example for Standard Apache Logs
 
     $logFile = "/path/to/apache/log/file";
     $logIterator = new ApacheLogIterator($logFile);
+    foreach ($logIterator as $logRecord) {
+        print_r($logRecord); //do whatever you want to here with the output array.
+    }
+
+## Example for Apache Error Logs
+
+    $logFile = "/path/to/apache/log/error_file";
+    $logFields = new ApacheLogFields();
+    $logFields->regex = '/^\[(... ... \d\d \d\d:\d\d:\d\d \d\d\d\d)\] \[(error)\] \[.+ (.*)\] (.*,) (.*$)$/';         
+    $logFields->fieldArray = array(                                                                      
+        'originalLogEntry',
+        'logtime',
+        'type',
+        'remoteIP',                                                                                      
+        'query',
+        'referrer'                                                                                       
+    );
+    $logIterator = new ApacheLogIterator($logFile, $logFields);                                    
     foreach ($logIterator as $logRecord) {
         print_r($logRecord); //do whatever you want to here with the output array.
     }
