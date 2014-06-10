@@ -6,7 +6,7 @@ A small PHP class intended to simplify the processing of Apache log files within
 
 ## Requirements
 
-ApacheLogIterator has been tested under PHP 5.3. It is written with the intention of also working under 5.2, but this has not yet been tested.
+ApacheLogIterator has been tested under PHP 5.3.
 
 This class has no external dependencies.
 
@@ -75,6 +75,6 @@ The output array looks something like this:
 
 ## Copyright and License
 
-This class was written by Simon Champion, and is copyright [Connection Services Limited](http://www.connectionservices.com/).
+This class was written by Simon Champion.
 
 It is released under the General Public License version 3 (GPLv3); see COPYING.txt for full license text. Please contact us if you require alternative licensing arrangements.
