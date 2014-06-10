@@ -9,9 +9,7 @@
  * @version 1.0 / 17-Aug-2012
  */
 
-//Include the file(s) being tested:
-require_once "ApacheLogIterator.php";
-require_once "ApacheLogFields.php";
+namespace ApacheLogIterator;
 
 class ApacheLogIteratorTest extends PHPUnit_Framework_TestCase {
     private $tempfile = '';

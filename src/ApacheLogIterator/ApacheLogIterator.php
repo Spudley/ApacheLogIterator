@@ -1,4 +1,6 @@
 <?php
+namespace ApacheLogIterator;
+
 /**
  * Iterator class to read an Apache access log.
  *
@@ -15,10 +17,11 @@
  * ie: $log = new ApacheLogIterator($filename, new myApacheLogFields());
  *
  * @author: Simon Champion <simon.champion@connectionservices.com>
+ * @author: Radu Topala <radu.topala@trisoft.ro>
  * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
  * @version 1.0.1 / 21-Aug-2012
  */
-class ApacheLogIterator extends SplFileObject {
+class ApacheLogIterator extends \SplFileObject {
     private $fields=null;   //instance of ApacheLogFields or similar class.
 
     public function __construct($filename, ApacheLogFields $fieldsObject=null) {
@@ -45,7 +48,7 @@ class ApacheLogIterator extends SplFileObject {
 		}
         $output = array();
         foreach ($this->fields->fieldArray as $key=>$field) {
-            if ($field) {
+            if ($field && isset($matches[$key])) {
 				$output[$field]=trim($matches[$key]);
 			}
         }
@@ -65,13 +68,13 @@ class ApacheLogIterator extends SplFileObject {
         return $output;
 
 	}
-    private function parseURL($protocol,$domain,$query) {
+    private function parseURL($protocol, $domain, $query) {
         $queryArgs = array();
         $fullURL = strtolower($protocol)."://".$domain.$query;
         $output = parse_url($fullURL);
         $output['fullURL'] = $fullURL;
         if(isset($output['query'])) {
-            parse_str($output['query'],$queryArgs);
+            parse_str(urldecode($output['query']),$queryArgs);
         } else {
             $output['query'] = '';
         }

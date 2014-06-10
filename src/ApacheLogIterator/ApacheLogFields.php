@@ -1,4 +1,6 @@
 <?php
+namespace ApacheLogIterator;
+
 /**
  * A config class for ApacheLogIterator.
  * This allows the main iterator class to be functional yet configurable.
@@ -14,6 +16,7 @@
  * implements suitable regex and fieldArray properties, and pass an instance of it into ApacheLogIterator's constructor.
  *
  * @author: Simon Champion <simon.champion@connectionservices.com>
+ * @author: Radu Topala <radu.topala@trisoft.ro>
  * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
  * @version 1.0 / 17-Aug-2012
  */
