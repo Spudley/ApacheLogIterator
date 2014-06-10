@@ -11,7 +11,7 @@
 
 namespace ApacheLogIterator;
 
-class ApacheLogIteratorTest extends PHPUnit_Framework_TestCase {
+class ApacheLogIteratorTest extends \PHPUnit_Framework_TestCase {
     private $tempfile = '';
 
     private $logEntries = array(
