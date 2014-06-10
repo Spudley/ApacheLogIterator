@@ -1,6 +1,6 @@
 # ApacheLogIterator
 
-### Version 1.0.1
+### Version 1.1.0
 
 A small PHP class intended to simplify the processing of Apache log files within a PHP program.
 
