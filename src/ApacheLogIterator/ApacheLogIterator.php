@@ -19,7 +19,7 @@ namespace ApacheLogIterator;
  * @author: Simon Champion <simon.champion@connectionservices.com>
  * @author: Radu Topala <radu.topala@trisoft.ro>
  * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
- * @version 1.0.1 / 21-Aug-2012
+ * @version 1.1.0 / 10-Jun-2014
  */
 class ApacheLogIterator extends \SplFileObject {
     private $fields=null;   //instance of ApacheLogFields or similar class.
