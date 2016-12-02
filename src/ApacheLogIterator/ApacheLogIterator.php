@@ -74,7 +74,7 @@ class ApacheLogIterator extends \SplFileObject {
         $output = parse_url($fullURL);
         $output['fullURL'] = $fullURL;
         if(isset($output['query'])) {
-            parse_str(urldecode($output['query']),$queryArgs);
+            parse_str($output['query'],$queryArgs);
         } else {
             $output['query'] = '';
         }

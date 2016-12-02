@@ -1,6 +1,7 @@
 {
     "name": "spudley/apache-log-iterator",
     "description": "An Apache log file processor class, in PHP",
+    "license": "GPLv3",
     "require": {
         "php": "^5.3.3 || ^7.0"
     },
