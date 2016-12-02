@@ -1,5 +1,5 @@
 <?php
-namespace ApacheLogIterator;
+namespace Spudley/ApacheLogIterator;
 
 /**
  * A config class for ApacheLogIterator.
