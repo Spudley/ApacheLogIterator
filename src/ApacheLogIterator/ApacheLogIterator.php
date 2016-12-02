@@ -1,5 +1,5 @@
 <?php
-namespace Spudley/ApacheLogIterator;
+namespace Spudley\ApacheLogIterator;
 
 /**
  * Iterator class to read an Apache access log.

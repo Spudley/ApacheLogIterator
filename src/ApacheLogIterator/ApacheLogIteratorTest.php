@@ -9,7 +9,7 @@
  * @version 2.0 / 01-Dec-2016
  */
 
-namespace Spudley/ApacheLogIterator;
+namespace Spudley\ApacheLogIterator;
 
 class ApacheLogIteratorTest extends \PHPUnit_Framework_TestCase {
     private $tempfile = '';
