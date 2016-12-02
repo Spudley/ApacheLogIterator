@@ -1,0 +1,7 @@
+{
+    "name": "Spudley/ApacheLogIterator",
+    "description": "An Apache log file processor class, in PHP",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+    }
+}
