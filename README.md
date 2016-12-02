@@ -1,8 +1,15 @@
 # ApacheLogIterator
 
-### Version 1.1.0
+### Version 2.0.0
 
 A small PHP class intended to simplify the processing of Apache log files within a PHP program.
+
+## Version History
+
+* 2.0 Changed namespace; added composer.json; added to Packagist.
+* 1.1 Added namespace.
+* 1.0 Initial release
+
 
 ## Requirements
 
@@ -76,5 +83,6 @@ The output array looks something like this:
 ## Copyright and License
 
 This class was written by Simon Champion.
+Copyright Simon Champion and Connection Services Ltd.
 
-It is released under the General Public License version 3 (GPLv3); see COPYING.txt for full license text. Please contact us if you require alternative licensing arrangements.
+It is released under the General Public License version 3 (GPLv3); see COPYING.txt for full license text. Please contact me if you require alternative licensing arrangements.

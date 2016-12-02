@@ -16,10 +16,10 @@ namespace Spudley/ApacheLogIterator;
  *
  * ie: $log = new ApacheLogIterator($filename, new myApacheLogFields());
  *
- * @author: Simon Champion <simon.champion@connectionservices.com>
+ * @author: Simon Champion <simon@simonchampion.net>
  * @author: Radu Topala <radu.topala@trisoft.ro>
- * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
- * @version 1.1.0 / 10-Jun-2014
+ * @copyright Simon Champion and Connection Services Limited (http://www.connectionservices.com), 2016
+ * @version 2.0 / 01-Dec-2016
  */
 class ApacheLogIterator extends \SplFileObject {
     private $fields=null;   //instance of ApacheLogFields or similar class.

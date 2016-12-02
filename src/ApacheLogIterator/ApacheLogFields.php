@@ -15,10 +15,10 @@ namespace Spudley/ApacheLogIterator;
  * If your Apache log files differ in format from this, write your own class that extends or replaces this class and
  * implements suitable regex and fieldArray properties, and pass an instance of it into ApacheLogIterator's constructor.
  *
- * @author: Simon Champion <simon.champion@connectionservices.com>
+ * @author: Simon Champion <simon@simonchampion.net>
  * @author: Radu Topala <radu.topala@trisoft.ro>
- * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
- * @version 1.0 / 17-Aug-2012
+ * @copyright Simon Champion and Connection Services Limited (http://www.connectionservices.com), 2016
+ * @version 2.0 / 01-Dec-2016
  */
 class ApacheLogFields {
     /**

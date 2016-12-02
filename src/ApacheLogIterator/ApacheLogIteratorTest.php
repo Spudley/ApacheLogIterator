@@ -4,9 +4,9 @@
  * Since this is an iterator class, we don't need to test all the methods individually;
  * we can simply use a foreach() loop to check the whole thing in one go.
  *
- * @author: Simon Champion <simon.champion@connectionservices.com>
- * @copyright Connection Services Limited (http://www.connectionservices.com), 2012
- * @version 1.0 / 17-Aug-2012
+ * @author: Simon Champion <simon@simonchampion.net>
+ * @copyright Simon Champion and Connection Services Limited (http://www.connectionservices.com), 2016
+ * @version 2.0 / 01-Dec-2016
  */
 
 namespace Spudley/ApacheLogIterator;
