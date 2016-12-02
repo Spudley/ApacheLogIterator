@@ -1,11 +1,12 @@
 # ApacheLogIterator
 
-### Version 2.0.0
+### Version 2.1.0
 
 A small PHP class intended to simplify the processing of Apache log files within a PHP program.
 
 ## Version History
 
+* 2.1 Eh, fixed a few stupid mistakes made in 2.0.
 * 2.0 Changed namespace; added composer.json; added to Packagist.
 * 1.1 Added namespace.
 * 1.0 Initial release
