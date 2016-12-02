@@ -3,5 +3,13 @@
     "description": "An Apache log file processor class, in PHP",
     "require": {
         "php": "^5.3.3 || ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spudley\\ApacheLogIterator\\": "src/ApacheLogIterator/"
+        }
     }
 }
